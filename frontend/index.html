@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Авиабилеты — авиабилеты «Полёт»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="top">
+        <div class="wrap">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt="">Полёт</a>
+            <button class="burger" onclick="toggleMenu()">Меню</button>
+            <nav class="menu" id="menu">
+            <a href="index.html" class="current">Купить билет</a>
+            <a href="index.html#fares">Тарифы и возврат</a>
+            <a href="manage.html" class="btn">Мои билеты и возврат</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="img/plane.svg" alt="" class="plane">
+            <div class="wrap">
+                <h1>Авиабилеты из Сургута<br>без лишних шагов</h1>
+                <p>Выберите рейс, тариф и место в салоне. Если планы изменятся, вернуть билет можно здесь же — сумма возврата посчитается по правилам тарифа.</p>
+            </div>
+        </section>
+        <section class="wrap">
+            <form class="search" id="search-form">
+                <div class="field"><label for="from">Откуда</label><select id="from"></select></div>
+                <button type="button" class="swap" id="swap" title="Поменять местами">⇄</button>
+                <div class="field"><label for="to">Куда</label><select id="to"></select></div>
+                <div class="field"><label for="date">Дата вылета</label><input type="date" id="date"></div>
+                <div class="field"><label for="passengers">Пассажиры</label><select id="passengers"><option value="1">1 взрослый</option><option value="2">2 взрослых</option><option value="3">3 взрослых</option><option value="4">4 взрослых</option><option value="5">5 взрослых</option></select></div>
+                <button class="btn" type="submit">Найти билеты</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Популярные направления</h2>
+                    <p>Прямые рейсы каждый день.</p>
+                </div>
+                <div class="cities" id="cities"></div>
+            </div>
+        </section>
+
+        <section class="section" id="fares" style="background:#ffffff">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Тарифы и правила возврата</h2>
+                    <p>Сумма возврата зависит от тарифа и от того, сколько времени осталось до вылета.</p>
+                </div>
+                <div class="fares" id="fare-list"><p>Загрузка...</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <div><b>Полёт</b><br>Продажа авиабилетов из Сургута<br>по России.</div>
+            <div><b>Возврат билетов</b><br>По коду бронирования и фамилии<br>в разделе «Мои билеты».</div>
+            <div><b>Поддержка</b><br>8 800 000-00-00<br>help@polet.example.ru</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search-form.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

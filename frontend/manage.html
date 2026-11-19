@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мои билеты — авиабилеты «Полёт»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="top">
+        <div class="wrap">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt="">Полёт</a>
+            <button class="burger" onclick="toggleMenu()">Меню</button>
+            <nav class="menu" id="menu">
+            <a href="index.html">Купить билет</a>
+            <a href="index.html#fares">Тарифы и возврат</a>
+            <a href="manage.html" class="btn">Мои билеты и возврат</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-top">
+            <div class="wrap">
+                <h1 style="font-size:36px">Мои билеты и возврат</h1>
+                <p>Введите код бронирования из квитанции и фамилию любого пассажира.</p>
+            </div>
+        </section>
+        <section class="wrap">
+            <div class="lookup">
+                <div class="field"><label for="code">Код бронирования</label><input type="text" id="code" placeholder="Например, K7F2QA" maxlength="6" style="text-transform:uppercase"></div>
+                <div class="field"><label for="last_name">Фамилия</label><input type="text" id="last_name" placeholder="Как в билете"></div>
+                <button class="btn blue" onclick="findBooking()">Найти</button>
+            </div>
+            <div id="booking" style="padding-bottom:70px"></div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <div><b>Полёт</b><br>Продажа авиабилетов из Сургута<br>по России.</div>
+            <div><b>Возврат билетов</b><br>По коду бронирования и фамилии<br>в разделе «Мои билеты».</div>
+            <div><b>Поддержка</b><br>8 800 000-00-00<br>help@polet.example.ru</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/manage.js"></script>
+</body>
+</html>
